@@ -48,5 +48,52 @@
     crossorigin="anonymous"
     async>
 </script>
+<!-- Utterances script to enable commenting and fetching data -->
+<script src="https://utteranc.es/client.js"
+repo="your-github-username/your-repo" <!-- Replace with your GitHub repo -->
+issue-term="pathname"
+label="location"
+theme="github-light"
+crossorigin="anonymous"
+async>
+</script>
+
+<!-- Container for the map and user comments -->
+<div id="map" style="height: 500px;"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+// Initialize the map
+var map = L.map('map').setView([51.6223, -8.889], 16); // Center on Clonakilty
+
+// Add OpenStreetMap tiles as the base map
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Function to fetch and display comments with coordinates
+async function fetchComments() {
+    // Fetch issues from GitHub using the GitHub API
+    const response = await fetch('https://api.github.com/repos/your-github-username/your-repo/issues?labels=location');  // Replace with your repo
+    const issues = await response.json();
+
+    // Loop through the issues and add markers to the map based on the comment body
+    issues.forEach(function(issue) {
+    const comment = issue.body;  // The comment text, which should contain lat, lon
+    const regex = /(-?\d+\.\d+),\s*(-?\d+\.\d+)/;  // Regex to match lat, lon
+    const match = comment.match(regex);
+
+    if (match) {
+        const lat = parseFloat(match[1]);
+        const lon = parseFloat(match[2]);
+        L.marker([lat, lon]).addTo(map)
+        .bindPopup('<b>' + issue.title + '</b><br>' + comment);
+    }
+    });
+}
+
+// Fetch comments when the page loads
+fetchComments();
+</script>
 </body>
 </html>
