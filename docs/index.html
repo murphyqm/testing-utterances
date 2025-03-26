@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Basic example dashboard – Example dashboard</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-867ed020ad6617227ff8aa943f37a81e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Example dashboard</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Basic example dashboard</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This is a very simple prototype dashboard. Mouse around the map below, and use the layers menu (top right hand corner of the map) to view different map layers and resources, which can be toggled.</p>
+<p>Providing a sortable, searchable table of the underlying data also improves accessibility.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Interactive map</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Underlying data</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="3f37fd29" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="13">
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
+    <script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;></script>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
+    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
+    
+            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
+            <style>
+                #map_9ddc59976bed7686fdc0e711a365dce9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class=&quot;folium-map&quot; id=&quot;map_9ddc59976bed7686fdc0e711a365dce9&quot; ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9ddc59976bed7686fdc0e711a365dce9 = L.map(
+                &quot;map_9ddc59976bed7686fdc0e711a365dce9&quot;,
+                {
+                    center: [51.6223, -8.889],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 16,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fa7b3ab90511efdcfd6f4ac495361394 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_fa7b3ab90511efdcfd6f4ac495361394.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+        
+    
+            var tile_layer_13dec7acc106430a1d66c11efa67c619 = L.tileLayer(
+                &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 20,
+  &quot;maxNativeZoom&quot;: 20,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;,
+  &quot;subdomains&quot;: &quot;abcd&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_13dec7acc106430a1d66c11efa67c619.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+        
+    
+            var tile_layer_42f90f58b093f1e477b5c55885c02007 = L.tileLayer(
+                &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;Esri&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_42f90f58b093f1e477b5c55885c02007.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+        
+    
+            var feature_group_45362123bae160a9f002ff7676c865c5 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_d21e39c5ef5b2dba2184e1b7ed852438 = L.marker(
+                [51.62269906303828, -8.893827490473342],
+                {
+}
+            ).addTo(feature_group_45362123bae160a9f002ff7676c865c5);
+        
+    
+        var popup_4f2dad457addf91f9ee0685fab5d5745 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_2263f43e3ece20f503895c95ca44683f = $(`<div id=&quot;html_2263f43e3ece20f503895c95ca44683f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Community centre.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_4f2dad457addf91f9ee0685fab5d5745.setContent(html_2263f43e3ece20f503895c95ca44683f);
+            
+        
+
+        marker_d21e39c5ef5b2dba2184e1b7ed852438.bindPopup(popup_4f2dad457addf91f9ee0685fab5d5745)
+        ;
+
+        
+    
+    
+            marker_d21e39c5ef5b2dba2184e1b7ed852438.bindTooltip(
+                `<div>
+                     Location: Community centre. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_c1d7bf78f36ff8f20da12a1fd5741ea4 = L.marker(
+                [51.621676172124666, -8.890217905596785],
+                {
+}
+            ).addTo(feature_group_45362123bae160a9f002ff7676c865c5);
+        
+    
+        var popup_e850f3a69b920e28a449a926b74cd21b = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_649b5361554cb0df30a297244a073f7e = $(`<div id=&quot;html_649b5361554cb0df30a297244a073f7e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Parish hall.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_e850f3a69b920e28a449a926b74cd21b.setContent(html_649b5361554cb0df30a297244a073f7e);
+            
+        
+
+        marker_c1d7bf78f36ff8f20da12a1fd5741ea4.bindPopup(popup_e850f3a69b920e28a449a926b74cd21b)
+        ;
+
+        
+    
+    
+            marker_c1d7bf78f36ff8f20da12a1fd5741ea4.bindTooltip(
+                `<div>
+                     Location: Parish hall. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_2e0446eac6e92154cf5d8fd05db2036b = L.marker(
+                [51.62254289797838, -8.88721201435851],
+                {
+}
+            ).addTo(feature_group_45362123bae160a9f002ff7676c865c5);
+        
+    
+        var popup_2307bfbd8e6ddbbb90b43a899330e220 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_8dd8fe49100bc1cbc45febd90543baf2 = $(`<div id=&quot;html_8dd8fe49100bc1cbc45febd90543baf2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Co-operative café.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_2307bfbd8e6ddbbb90b43a899330e220.setContent(html_8dd8fe49100bc1cbc45febd90543baf2);
+            
+        
+
+        marker_2e0446eac6e92154cf5d8fd05db2036b.bindPopup(popup_2307bfbd8e6ddbbb90b43a899330e220)
+        ;
+
+        
+    
+    
+            marker_2e0446eac6e92154cf5d8fd05db2036b.bindTooltip(
+                `<div>
+                     Location: Co-operative café. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            var marker_bcd7fb317cb068994ca5644d8ce52b70 = L.marker(
+                [51.62178548981129, -8.886985629245714],
+                {
+}
+            ).addTo(feature_group_45362123bae160a9f002ff7676c865c5);
+        
+    
+        var popup_7178b92991818ae371d2a52735343432 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_3bb834fd11586cf00bc4514febf73ae4 = $(`<div id=&quot;html_3bb834fd11586cf00bc4514febf73ae4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Methodist hall.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_7178b92991818ae371d2a52735343432.setContent(html_3bb834fd11586cf00bc4514febf73ae4);
+            
+        
+
+        marker_bcd7fb317cb068994ca5644d8ce52b70.bindPopup(popup_7178b92991818ae371d2a52735343432)
+        ;
+
+        
+    
+    
+            marker_bcd7fb317cb068994ca5644d8ce52b70.bindTooltip(
+                `<div>
+                     Location: Methodist hall. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            feature_group_45362123bae160a9f002ff7676c865c5.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+        
+    
+            var feature_group_48314559ea74e18b0f08b9028ba5af08 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_0535ee9718842703f42ea306e4b9e285 = L.marker(
+                [51.6228, -8.892],
+                {
+}
+            ).addTo(feature_group_48314559ea74e18b0f08b9028ba5af08);
+        
+    
+            var icon_9140b5494dc2e6d5e22c53756c85bd81 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;info-sign&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_ffdcbb5349ea5a07d8628d2ba1a6edd1 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_1d3924c6f784c5630583b612b849d532 = $(`<div id=&quot;html_1d3924c6f784c5630583b612b849d532&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Grocery shop.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_ffdcbb5349ea5a07d8628d2ba1a6edd1.setContent(html_1d3924c6f784c5630583b612b849d532);
+            
+        
+
+        marker_0535ee9718842703f42ea306e4b9e285.bindPopup(popup_ffdcbb5349ea5a07d8628d2ba1a6edd1)
+        ;
+
+        
+    
+    
+            marker_0535ee9718842703f42ea306e4b9e285.bindTooltip(
+                `<div>
+                     Location: Grocery shop. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_0535ee9718842703f42ea306e4b9e285.setIcon(icon_9140b5494dc2e6d5e22c53756c85bd81);
+            
+    
+            var marker_56415ee200094bfe0fa0441d84ff4f25 = L.marker(
+                [51.622, -8.891],
+                {
+}
+            ).addTo(feature_group_48314559ea74e18b0f08b9028ba5af08);
+        
+    
+            var icon_afb75751b71d19465132535ee5d7889d = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;info-sign&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_d9461c0d1ed9b17ead08c1b2a5bb2cde = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_08a326101e9f0da20a05659a76dbf8ab = $(`<div id=&quot;html_08a326101e9f0da20a05659a76dbf8ab&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Cycling shop.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_d9461c0d1ed9b17ead08c1b2a5bb2cde.setContent(html_08a326101e9f0da20a05659a76dbf8ab);
+            
+        
+
+        marker_56415ee200094bfe0fa0441d84ff4f25.bindPopup(popup_d9461c0d1ed9b17ead08c1b2a5bb2cde)
+        ;
+
+        
+    
+    
+            marker_56415ee200094bfe0fa0441d84ff4f25.bindTooltip(
+                `<div>
+                     Location: Cycling shop. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_56415ee200094bfe0fa0441d84ff4f25.setIcon(icon_afb75751b71d19465132535ee5d7889d);
+            
+    
+            var marker_d35158592127c0bef5508fb733c1478a = L.marker(
+                [51.6223, -8.889],
+                {
+}
+            ).addTo(feature_group_48314559ea74e18b0f08b9028ba5af08);
+        
+    
+            var icon_089a7de5f5c0c55fa977cd65ba328ab1 = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;info-sign&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_d5c97a25882614ef2f8b2156d6389c11 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_f4159d618e6c3e122b350808bfc013aa = $(`<div id=&quot;html_f4159d618e6c3e122b350808bfc013aa&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Chemist.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_d5c97a25882614ef2f8b2156d6389c11.setContent(html_f4159d618e6c3e122b350808bfc013aa);
+            
+        
+
+        marker_d35158592127c0bef5508fb733c1478a.bindPopup(popup_d5c97a25882614ef2f8b2156d6389c11)
+        ;
+
+        
+    
+    
+            marker_d35158592127c0bef5508fb733c1478a.bindTooltip(
+                `<div>
+                     Location: Chemist. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_d35158592127c0bef5508fb733c1478a.setIcon(icon_089a7de5f5c0c55fa977cd65ba328ab1);
+            
+    
+            var marker_b9ab4129241c6fccbf2d3bfcfbe284c8 = L.marker(
+                [51.6215, -8.887],
+                {
+}
+            ).addTo(feature_group_48314559ea74e18b0f08b9028ba5af08);
+        
+    
+            var icon_c0622ca29ae0077900c3fe807605d8de = L.AwesomeMarkers.icon(
+                {
+  &quot;markerColor&quot;: &quot;orange&quot;,
+  &quot;iconColor&quot;: &quot;white&quot;,
+  &quot;icon&quot;: &quot;info-sign&quot;,
+  &quot;prefix&quot;: &quot;glyphicon&quot;,
+  &quot;extraClasses&quot;: &quot;fa-rotate-0&quot;,
+}
+            );
+        
+    
+        var popup_3f073bee53b5491ce0a0e24067695bad = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+});
+
+        
+            
+                var html_8cb270d71005ae85957806074188e505 = $(`<div id=&quot;html_8cb270d71005ae85957806074188e505&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Dry cleaners.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_3f073bee53b5491ce0a0e24067695bad.setContent(html_8cb270d71005ae85957806074188e505);
+            
+        
+
+        marker_b9ab4129241c6fccbf2d3bfcfbe284c8.bindPopup(popup_3f073bee53b5491ce0a0e24067695bad)
+        ;
+
+        
+    
+    
+            marker_b9ab4129241c6fccbf2d3bfcfbe284c8.bindTooltip(
+                `<div>
+                     Location: Dry cleaners. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+                marker_b9ab4129241c6fccbf2d3bfcfbe284c8.setIcon(icon_c0622ca29ae0077900c3fe807605d8de);
+            
+    
+            feature_group_48314559ea74e18b0f08b9028ba5af08.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+        
+    
+            var feature_group_e6f5af3c4f2b333d069473f9811dc695 = L.featureGroup(
+                {
+}
+            );
+        
+    
+
+        function geo_json_d70f4dce9809a0408d86d42b3e7fe845_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d70f4dce9809a0408d86d42b3e7fe845 = L.geoJson(null, {
+                onEachFeature: geo_json_d70f4dce9809a0408d86d42b3e7fe845_onEachFeature,
+            
+            ...{
+}
+        });
+
+        function geo_json_d70f4dce9809a0408d86d42b3e7fe845_add (data) {
+            geo_json_d70f4dce9809a0408d86d42b3e7fe845
+                .addData(data);
+        }
+            geo_json_d70f4dce9809a0408d86d42b3e7fe845_add({&quot;bbox&quot;: [-8.913169563297714, 51.61283136590018, -8.877505720375659, 51.629940834011705], &quot;features&quot;: [{&quot;bbox&quot;: [-8.913169563297714, 51.61283136590018, -8.877505720375659, 51.629940834011705], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-8.880478935328853, 51.62060578154822], [-8.880668675111432, 51.62127315067259], [-8.882827954033061, 51.621973046255356], [-8.883528416324923, 51.62232300852135], [-8.881519322864907, 51.62320422039247], [-8.879040198255776, 51.623854085408894], [-8.877505720375659, 51.6239959392226], [-8.879266329227042, 51.62574079439028], [-8.882206600383132, 51.62685793528044], [-8.8882737374826, 51.62476657881866], [-8.888184925810634, 51.625451347264104], [-8.88712710581853, 51.625926886904736], [-8.887118005661346, 51.6263025684723], [-8.88431917277542, 51.62742010847718], [-8.885017196002241, 51.62832841562117], [-8.884029987366567, 51.62855673953722], [-8.88412570929345, 51.629940834011705], [-8.887002063793055, 51.62923272360204], [-8.887182047314477, 51.62967531722164], [-8.889327375778873, 51.62695367550896], [-8.890999607791382, 51.6260115530657], [-8.892072272023608, 51.62655824423537], [-8.893955289584003, 51.62658152356522], [-8.89448927963832, 51.62707005309396], [-8.897206071143174, 51.62748881992805], [-8.906124641877767, 51.623534134197826], [-8.906349479795125, 51.62320843501189], [-8.906124641877767, 51.62181255487815], [-8.906049695904983, 51.62055622604211], [-8.90919742675203, 51.620090910238986], [-8.908672804944501, 51.61878800060623], [-8.906649263685296, 51.618694934201045], [-8.906649263685296, 51.617857327965936], [-8.913169563297714, 51.61701970627098], [-8.91204537370885, 51.6145067484282], [-8.909347318697627, 51.615297879792564], [-8.906949047575438, 51.6149721214893], [-8.903126802975379, 51.61539095316414], [-8.902976911030777, 51.61590285329612], [-8.900803477825946, 51.616135533265776], [-8.900728531854213, 51.61729891522023], [-8.902452289222282, 51.61767119114725], [-8.902677127140663, 51.61822959931234], [-8.900503693935832, 51.61841573384041], [-8.899304558375263, 51.617857327965936], [-8.897805638924524, 51.61878800060623], [-8.897355963088785, 51.61808999791512], [-8.896531557391171, 51.61608899736714], [-8.897131125171484, 51.61501865853276], [-8.896156827528273, 51.614180984446705], [-8.89458296210475, 51.61283136590018], [-8.892484474872731, 51.61478597283758], [-8.893084042654039, 51.61580978097433], [-8.892334582928157, 51.616461283219195], [-8.891135447367617, 51.61701970627098], [-8.888887068191025, 51.61897413284399], [-8.886713634987188, 51.61892759985628], [-8.885664391371193, 51.62027703713281], [-8.881692254825538, 51.619392926394994], [-8.880478935328853, 51.62060578154822]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;name&quot;: &quot;Clonakilty town boundary&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+        geo_json_d70f4dce9809a0408d86d42b3e7fe845.setStyle(function(feature) {return feature.properties.style;});
+
+        
+    
+            geo_json_d70f4dce9809a0408d86d42b3e7fe845.bindTooltip(
+                `<div>
+                     Clonakilty town centre. Layers like this could include heatmaps.
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
+        
+    
+            geo_json_d70f4dce9809a0408d86d42b3e7fe845.addTo(feature_group_e6f5af3c4f2b333d069473f9811dc695);
+        
+    
+            feature_group_e6f5af3c4f2b333d069473f9811dc695.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+        
+    
+            var layer_control_99577596b4cd244a785674598a4f08c9_layers = {
+                base_layers : {
+                    &quot;Traditional&quot; : tile_layer_fa7b3ab90511efdcfd6f4ac495361394,
+                    &quot;Minimal&quot; : tile_layer_13dec7acc106430a1d66c11efa67c619,
+                    &quot;Esri Satellite&quot; : tile_layer_42f90f58b093f1e477b5c55885c02007,
+                },
+                overlays :  {
+                    &quot;Community resources&quot; : feature_group_45362123bae160a9f002ff7676c865c5,
+                    &quot;Retailers&quot; : feature_group_48314559ea74e18b0f08b9028ba5af08,
+                    &quot;Clonakilty town boundary&quot; : feature_group_e6f5af3c4f2b333d069473f9811dc695,
+                },
+            };
+            let layer_control_99577596b4cd244a785674598a4f08c9 = L.control.layers(
+                layer_control_99577596b4cd244a785674598a4f08c9_layers.base_layers,
+                layer_control_99577596b4cd244a785674598a4f08c9_layers.overlays,
+                {
+  &quot;position&quot;: &quot;topright&quot;,
+  &quot;collapsed&quot;: true,
+  &quot;autoZIndex&quot;: true,
+}
+            ).addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+
+        
+</script>
+</html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>This searchable table could be provided alongside the map with additional filtering capabilities, and link to the map, highlighting data selected in the table.</p>
+<div class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<table id="itables_a48d47ed_67b9_45ae_9651_882878d627bc" class="display nowrap" data-quarto-disable-processing="true" style="table-layout:auto;width:auto;margin:auto;caption-side:bottom"><caption><p>Interactive Points of Interest in Clonakilty</p> {#3b308785}</caption>
+<thead>
+    <tr style="text-align: right;">
+      
+      <th>Name</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Type</th>
+    </tr>
+  </thead><tbody><tr>
+<td style="vertical-align:middle; text-align:left">
+<a href="https://mwouts.github.io/itables/"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="64" viewbox="0 0 500 400" style="font-family: 'Droid Sans', sans-serif;">
+    <g style="fill:#d9d7fc">
+        <path d="M100,400H500V357H100Z"></path>
+        <path d="M100,300H400V257H100Z"></path>
+        <path d="M0,200H400V157H0Z"></path>
+        <path d="M100,100H500V57H100Z"></path>
+        <path d="M100,350H500V307H100Z"></path>
+        <path d="M100,250H400V207H100Z"></path>
+        <path d="M0,150H400V107H0Z"></path>
+        <path d="M100,50H500V7H100Z"></path>
+    </g>
+    <g style="fill:#1a1366;stroke:#1a1366;">
+   <rect x="100" y="7" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="5s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="0" y="107" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="3.5s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="0;0;400" dur="3.5s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="207" width="300" height="43">
+    <animate attributename="width" values="0;300;0" dur="3s" repeatcount="indefinite"></animate>
+    <animate attributename="x" values="100;100;400" dur="3s" repeatcount="indefinite"></animate>
+  </rect>
+        <rect x="100" y="307" width="400" height="43">
+    <animate attributename="width" values="0;400;0" dur="4s" repeatcount="indefinite"></animate>
+      <animate attributename="x" values="100;100;500" dur="4s" repeatcount="indefinite"></animate>
+  </rect>
+        <g style="fill:transparent;stroke-width:8; stroke-linejoin:round" rx="5">
+            <g transform="translate(45 50) rotate(-45)">
+                <circle r="33" cx="0" cy="0"></circle>
+                <rect x="-8" y="32" width="16" height="30"></rect>
+            </g>
+
+            <g transform="translate(450 152)">
+                <polyline points="-15,-20 -35,-20 -35,40 25,40 25,20"></polyline>
+                <rect x="-15" y="-40" width="60" height="60"></rect>
+            </g>
+
+            <g transform="translate(50 352)">
+                <polygon points="-35,-5 0,-40 35,-5"></polygon>
+                <polygon points="-35,10 0,45 35,10"></polygon>
+            </g>
+
+            <g transform="translate(75 250)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+
+            <g transform="translate(425 250) rotate(180)">
+                <polyline points="-30,30 -60,0 -30,-30"></polyline>
+                <polyline points="0,30 -30,0 0,-30"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
+</a>
+Loading ITables v2.2.5 from the internet...
+(need <a href="https://mwouts.github.io/itables/troubleshooting.html">help</a>?)</td>
+</tr></tbody>
+</table>
+<link href="https://www.unpkg.com/dt_for_itables@2.0.13/dt_bundle.css" rel="stylesheet">
+<script type="module">
+    import {DataTable, jQuery as $} from 'https://www.unpkg.com/dt_for_itables@2.0.13/dt_bundle.js';
+
+    document.querySelectorAll("#itables_a48d47ed_67b9_45ae_9651_882878d627bc:not(.dataTable)").forEach(table => {
+        if (!(table instanceof HTMLTableElement))
+            return;
+
+        // Define the table data
+        const data = [["Community centre", -8.893827, 51.622699, "Community Resources"], ["Parish hall", -8.890218, 51.621676, "Community Resources"], ["Co-operative caf\u00e9", -8.887212, 51.622543, "Community Resources"], ["Methodist hall", -8.886986, 51.621785, "Community Resources"], ["Grocery shop", -8.892, 51.6228, "Retailers"], ["Cycling shop", -8.891, 51.622, "Retailers"], ["Chemist", -8.889, 51.6223, "Retailers"], ["Dry cleaners", -8.887, 51.6215, "Retailers"]];
+
+        // Define the dt_args
+        let dt_args = {"layout": {"topStart": "search", "topEnd": null, "bottomStart": "info", "bottomEnd": "paging"}, "order": [], "warn_on_selected_rows_not_rendered": true};
+        dt_args["data"] = data;
+
+        
+        new DataTable(table, dt_args);
+    });
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>As stated above, this is a very simple proof-of-concept; this is also a very light-weight, free web-app stored as static html. A full web-app running on a dedicated server can also run statistical calculations on the data, can link table filtering to the visualisation to allow for thorough exploration, and provide summary information on selected areas.</p>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

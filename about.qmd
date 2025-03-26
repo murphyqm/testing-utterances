@@ -1,0 +1,87 @@
+---
+title: "About"
+---
+
+We can have multiple pages with various embedded interactive visualisations, to help provide context and support and to make the tool more useful.
+
+Additionally, the website can be themed and styled to match other resources.
+
+```{python}
+#| tbl-cap: Data can also be presented in a more report-like format
+#| echo: false
+
+from IPython.display import Markdown
+from tabulate import tabulate
+
+# Define the points for both layers
+points = [
+    {"coords": [-8.893827490473342, 51.62269906303828], "name": "Community centre"},
+    {"coords": [-8.890217905596785, 51.621676172124666], "name": "Parish hall"},
+    {"coords": [-8.88721201435851, 51.62254289797838], "name": "Co-operative café"},
+    {"coords": [-8.886985629245714, 51.62178548981129], "name": "Methodist hall"}
+]
+
+points2 = [
+    {"coords": [-8.892, 51.6228], "name": "Grocery shop"},
+    {"coords": [-8.891, 51.622], "name": "Cycling shop"},
+    {"coords": [-8.889, 51.6223], "name": "Chemist"},
+    {"coords": [-8.887, 51.6215], "name": "Dry cleaners"}
+]
+
+# Combine the points into a single list with the "Type" added
+points_combined = []
+for point in points:
+    points_combined.append([point["name"], point["coords"][0], point["coords"][1], "Community Resources"])
+for point in points2:
+    points_combined.append([point["name"], point["coords"][0], point["coords"][1], "Retailers"])
+
+# Create the table using tabulate
+table = tabulate(
+    points_combined, 
+    headers=["Name", "Longitude", "Latitude", "Type"], 
+    tablefmt="pipe",  # Markdown table format
+    numalign="center"
+)
+
+# Display the table in Markdown format
+Markdown(table)
+```
+
+
+```{python}
+#| echo: false
+
+import folium
+import geopandas as gpd
+from IPython.display import display, HTML
+
+# Create a map centered around Ireland
+map_ireland = folium.Map(location=[53.349805, -6.26031], zoom_start=6)  # Dublin coordinates
+
+# Adding markers for a few points in Ireland (as a separate layer)
+marker_layer = folium.FeatureGroup(name="Cities").add_to(map_ireland)
+locations = [
+    {"name": "Dublin", "coords": [53.349805, -6.26031]},
+    {"name": "Cork", "coords": [51.8985, -8.4756]},
+    {"name": "Galway", "coords": [53.2707, -9.0568]},
+    {"name": "Limerick", "coords": [52.6638, -8.6267]}
+]
+
+# Adding markers to the marker layer
+for location in locations:
+    folium.Marker(location["coords"], popup=location["name"]).add_to(marker_layer)
+
+geojson_file = 'example.geojson'
+
+gdf = gpd.read_file(geojson_file)
+
+# Create a GeoJSON layer for the regions (as a separate layer)
+geojson_layer = folium.FeatureGroup(name="Ireland Region").add_to(map_ireland)
+folium.GeoJson(gdf).add_to(geojson_layer)
+
+# Add Layer Control to toggle between layers
+folium.LayerControl().add_to(map_ireland)
+
+map_ireland
+```
+

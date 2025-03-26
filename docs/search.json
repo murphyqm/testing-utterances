@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "We can have multiple pages with various embedded interactive visualisations, to help provide context and support and to make the tool more useful.\nAdditionally, the website can be themed and styled to match other resources.\n\n\n\nData can also be presented in a more report-like format\n\n\nName\nLongitude\nLatitude\nType\n\n\n\n\nCommunity centre\n-8.89383\n51.6227\nCommunity Resources\n\n\nParish hall\n-8.89022\n51.6217\nCommunity Resources\n\n\nCo-operative café\n-8.88721\n51.6225\nCommunity Resources\n\n\nMethodist hall\n-8.88699\n51.6218\nCommunity Resources\n\n\nGrocery shop\n-8.892\n51.6228\nRetailers\n\n\nCycling shop\n-8.891\n51.622\nRetailers\n\n\nChemist\n-8.889\n51.6223\nRetailers\n\n\nDry cleaners\n-8.887\n51.6215\nRetailers\n\n\n\n\n\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Basic example dashboard",
+    "section": "",
+    "text": "This is a very simple prototype dashboard. Mouse around the map below, and use the layers menu (top right hand corner of the map) to view different map layers and resources, which can be toggled.\nProviding a sortable, searchable table of the underlying data also improves accessibility.\n\nInteractive mapUnderlying data\n\n\n\n\nMake this Notebook Trusted to load map: File -&gt; Trust Notebook\n\n\n\n\nThis searchable table could be provided alongside the map with additional filtering capabilities, and link to the map, highlighting data selected in the table.\n\n\nInteractive Points of Interest in Clonakilty {#3b308785}\n\n    \n      \n      Name\n      Longitude\n      Latitude\n      Type\n    \n  \n\n\n    \n        \n        \n        \n        \n        \n        \n        \n        \n    \n    \n   \n    \n      \n  \n        \n    \n    \n  \n        \n    \n    \n  \n        \n    \n      \n  \n        \n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n\n            \n                \n                \n            \n        \n    \n\n\nLoading ITables v2.2.5 from the internet...\n(need help?)\n\n\n\n\n\n\n\n\n\nAs stated above, this is a very simple proof-of-concept; this is also a very light-weight, free web-app stored as static html. A full web-app running on a dedicated server can also run statistical calculations on the data, can link table filtering to the visualisation to allow for thorough exploration, and provide summary information on selected areas."
+  }
+]

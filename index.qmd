@@ -1,0 +1,129 @@
+---
+title: "Basic example dashboard"
+---
+
+This is a very simple prototype dashboard. Mouse around the map below, and use the layers menu (top right hand corner of the map)
+to view different map layers and resources, which can be toggled.
+
+Providing a sortable, searchable table of the underlying data also improves accessibility.
+
+
+::: {.panel-tabset}
+
+## Interactive map
+```{python}
+#| echo: false
+
+import folium
+import geopandas as gpd
+from IPython.display import display, HTML
+
+# Create a map centered around Ireland
+map_ireland = folium.Map(location=[51.6223, -8.889], zoom_start=16, tiles=None)  # Clonakilty
+folium.TileLayer('openstreetmap', name='Traditional').add_to(map_ireland)
+folium.TileLayer('cartodbpositron', name='Minimal').add_to(map_ireland)
+folium.TileLayer(
+        tiles = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        attr = 'Esri',
+        name = 'Esri Satellite',
+        overlay = False,
+        control = True
+       ).add_to(map_ireland)
+
+# Define the points, each with a name, coordinates, and popup content
+points = [
+    {"coords": [-8.893827490473342, 51.62269906303828], "name": "Community centre"},
+    {"coords": [-8.890217905596785, 51.621676172124666], "name": "Parish hall"},
+    {"coords": [-8.88721201435851, 51.62254289797838], "name": "Co-operative café"},
+    {"coords": [-8.886985629245714, 51.62178548981129], "name": "Methodist hall"}
+]
+
+# Create a FeatureGroup to hold the points, so we can toggle them on/off together
+point_layer = folium.FeatureGroup(name="Community resources").add_to(map_ireland)
+
+# Add the points to the layer with their names in the pop-up
+for point in points:
+    folium.Marker(
+        location=[point["coords"][1], point["coords"][0]],  # [lat, lon]
+        popup=point["name"]+'.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.',
+        tooltip = 'Location: '+point["name"]+'. Click for more information',
+    ).add_to(point_layer)
+
+
+# Define the points, each with a name, coordinates, and popup content
+points2 = [
+    {"coords": [-8.892, 51.6228], "name": "Grocery shop"},
+    {"coords": [-8.891, 51.622], "name": "Cycling shop"},
+    {"coords": [-8.889, 51.6223], "name": "Chemist"},
+    {"coords": [-8.887, 51.6215], "name": "Dry cleaners"}
+]
+
+# Create a FeatureGroup to hold the points, so we can toggle them on/off together
+point_layer2 = folium.FeatureGroup(name="Retailers").add_to(map_ireland)
+
+# Add the points to the layer with their names in the pop-up
+for point in points2:
+    folium.Marker(
+        location=[point["coords"][1], point["coords"][0]],  # [lat, lon]
+        popup=point["name"]+'.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.',
+        tooltip = 'Location: '+point["name"]+'. Click for more information',
+        icon=folium.Icon(color="orange") 
+    ).add_to(point_layer2)
+
+geojson_file = 'clonakilty.geojson'
+
+gdf = gpd.read_file(geojson_file)
+
+# Create a GeoJSON layer for the regions (as a separate layer)
+geojson_layer = folium.FeatureGroup(name="Clonakilty town boundary").add_to(map_ireland)
+folium.GeoJson(gdf,
+tooltip = 'Clonakilty town centre. Layers like this could include heatmaps.',).add_to(geojson_layer)
+
+# Add Layer Control to toggle between layers
+folium.LayerControl().add_to(map_ireland)
+
+map_ireland
+```
+
+## Underlying data
+
+This searchable table could be provided alongside the map with additional filtering capabilities, and link to the map, highlighting data selected in the table.
+
+```{python}
+#| tbl-cap: Interactive Points of Interest in Clonakilty
+#| echo: false
+
+from itables import show
+import pandas as pd
+
+# Define the points for both layers
+points = [
+    {"coords": [-8.893827490473342, 51.62269906303828], "name": "Community centre"},
+    {"coords": [-8.890217905596785, 51.621676172124666], "name": "Parish hall"},
+    {"coords": [-8.88721201435851, 51.62254289797838], "name": "Co-operative café"},
+    {"coords": [-8.886985629245714, 51.62178548981129], "name": "Methodist hall"}
+]
+
+points2 = [
+    {"coords": [-8.892, 51.6228], "name": "Grocery shop"},
+    {"coords": [-8.891, 51.622], "name": "Cycling shop"},
+    {"coords": [-8.889, 51.6223], "name": "Chemist"},
+    {"coords": [-8.887, 51.6215], "name": "Dry cleaners"}
+]
+
+# Combine the points into a single list with the "Type" added
+points_combined = []
+for point in points:
+    points_combined.append([point["name"], point["coords"][0], point["coords"][1], "Community Resources"])
+for point in points2:
+    points_combined.append([point["name"], point["coords"][0], point["coords"][1], "Retailers"])
+
+# Create a DataFrame
+df_points = pd.DataFrame(points_combined, columns=["Name", "Longitude", "Latitude", "Type"])
+
+# Display the interactive table using itables
+show(df_points, layout={"topStart": "search", "topEnd": None})
+```
+:::
+
+As stated above, this is a very simple proof-of-concept; this is also a very light-weight, free web-app stored as static html. A full web-app running on a dedicated server can also run statistical calculations on the data, can link table filtering to the visualisation to allow for thorough exploration, and provide summary information on selected areas.
