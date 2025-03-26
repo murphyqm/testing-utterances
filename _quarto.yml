@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "test.html"
 
 website:
   title: "Example dashboard"
@@ -9,6 +11,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - test-js.qmd
+      - test.html
 
 format:
   html:

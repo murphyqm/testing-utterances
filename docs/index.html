@@ -98,6 +98,14 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./test-js.html"> 
+<span class="menu-text">Setting up js and comments</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./test.html"> 
+<span class="menu-text"></span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -140,8 +148,8 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Interactive map</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Underlying data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="3f37fd29" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div id="73f835e7" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
 <html>
 <head>
@@ -169,7 +177,7 @@ ul.task-list li input[type="checkbox"] {
             <meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
             <style>
-                #map_9ddc59976bed7686fdc0e711a365dce9 {
+                #map_dcdd889c87faa8fcd7259a7e9e94404e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -183,14 +191,14 @@ ul.task-list li input[type="checkbox"] {
 <body>
     
     
-            <div class=&quot;folium-map&quot; id=&quot;map_9ddc59976bed7686fdc0e711a365dce9&quot; ></div>
+            <div class=&quot;folium-map&quot; id=&quot;map_dcdd889c87faa8fcd7259a7e9e94404e&quot; ></div>
         
 </body>
 <script>
     
     
-            var map_9ddc59976bed7686fdc0e711a365dce9 = L.map(
-                &quot;map_9ddc59976bed7686fdc0e711a365dce9&quot;,
+            var map_dcdd889c87faa8fcd7259a7e9e94404e = L.map(
+                &quot;map_dcdd889c87faa8fcd7259a7e9e94404e&quot;,
                 {
                     center: [51.6223, -8.889],
                     crs: L.CRS.EPSG3857,
@@ -207,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
 
         
     
-            var tile_layer_fa7b3ab90511efdcfd6f4ac495361394 = L.tileLayer(
+            var tile_layer_42532a10e0fda52ad62e67a49d79ac75 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -224,10 +232,10 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            tile_layer_fa7b3ab90511efdcfd6f4ac495361394.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+            tile_layer_42532a10e0fda52ad62e67a49d79ac75.addTo(map_dcdd889c87faa8fcd7259a7e9e94404e);
         
     
-            var tile_layer_13dec7acc106430a1d66c11efa67c619 = L.tileLayer(
+            var tile_layer_e11356ec474b4bb751dde295e7be4c6a = L.tileLayer(
                 &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -244,10 +252,10 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            tile_layer_13dec7acc106430a1d66c11efa67c619.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+            tile_layer_e11356ec474b4bb751dde295e7be4c6a.addTo(map_dcdd889c87faa8fcd7259a7e9e94404e);
         
     
-            var tile_layer_42f90f58b093f1e477b5c55885c02007 = L.tileLayer(
+            var tile_layer_d5a214b7e1db7ed87d9b93494abda096 = L.tileLayer(
                 &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -264,40 +272,40 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            tile_layer_42f90f58b093f1e477b5c55885c02007.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+            tile_layer_d5a214b7e1db7ed87d9b93494abda096.addTo(map_dcdd889c87faa8fcd7259a7e9e94404e);
         
     
-            var feature_group_45362123bae160a9f002ff7676c865c5 = L.featureGroup(
+            var feature_group_c3035c7151b43b8be62850142cbc1d84 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_d21e39c5ef5b2dba2184e1b7ed852438 = L.marker(
+            var marker_183e47fc29ec5cffc00bcb206fb1f5fb = L.marker(
                 [51.62269906303828, -8.893827490473342],
                 {
 }
-            ).addTo(feature_group_45362123bae160a9f002ff7676c865c5);
+            ).addTo(feature_group_c3035c7151b43b8be62850142cbc1d84);
         
     
-        var popup_4f2dad457addf91f9ee0685fab5d5745 = L.popup({
+        var popup_4ce00d9031202ae25365538b0747acfe = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_2263f43e3ece20f503895c95ca44683f = $(`<div id=&quot;html_2263f43e3ece20f503895c95ca44683f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Community centre.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
-                popup_4f2dad457addf91f9ee0685fab5d5745.setContent(html_2263f43e3ece20f503895c95ca44683f);
+                var html_809dbaed66798a6bc20eecd1fa689654 = $(`<div id=&quot;html_809dbaed66798a6bc20eecd1fa689654&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Community centre.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_4ce00d9031202ae25365538b0747acfe.setContent(html_809dbaed66798a6bc20eecd1fa689654);
             
         
 
-        marker_d21e39c5ef5b2dba2184e1b7ed852438.bindPopup(popup_4f2dad457addf91f9ee0685fab5d5745)
+        marker_183e47fc29ec5cffc00bcb206fb1f5fb.bindPopup(popup_4ce00d9031202ae25365538b0747acfe)
         ;
 
         
     
     
-            marker_d21e39c5ef5b2dba2184e1b7ed852438.bindTooltip(
+            marker_183e47fc29ec5cffc00bcb206fb1f5fb.bindTooltip(
                 `<div>
                      Location: Community centre. Click for more information
                  </div>`,
@@ -307,31 +315,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_c1d7bf78f36ff8f20da12a1fd5741ea4 = L.marker(
+            var marker_81ed57b90c796aea107ffd339e5836f3 = L.marker(
                 [51.621676172124666, -8.890217905596785],
                 {
 }
-            ).addTo(feature_group_45362123bae160a9f002ff7676c865c5);
+            ).addTo(feature_group_c3035c7151b43b8be62850142cbc1d84);
         
     
-        var popup_e850f3a69b920e28a449a926b74cd21b = L.popup({
+        var popup_eacb6c5d21af4fe10e606ab75cccbaec = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_649b5361554cb0df30a297244a073f7e = $(`<div id=&quot;html_649b5361554cb0df30a297244a073f7e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Parish hall.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
-                popup_e850f3a69b920e28a449a926b74cd21b.setContent(html_649b5361554cb0df30a297244a073f7e);
+                var html_4310a05c9d3ce3bed2fa28d9166309f3 = $(`<div id=&quot;html_4310a05c9d3ce3bed2fa28d9166309f3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Parish hall.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_eacb6c5d21af4fe10e606ab75cccbaec.setContent(html_4310a05c9d3ce3bed2fa28d9166309f3);
             
         
 
-        marker_c1d7bf78f36ff8f20da12a1fd5741ea4.bindPopup(popup_e850f3a69b920e28a449a926b74cd21b)
+        marker_81ed57b90c796aea107ffd339e5836f3.bindPopup(popup_eacb6c5d21af4fe10e606ab75cccbaec)
         ;
 
         
     
     
-            marker_c1d7bf78f36ff8f20da12a1fd5741ea4.bindTooltip(
+            marker_81ed57b90c796aea107ffd339e5836f3.bindTooltip(
                 `<div>
                      Location: Parish hall. Click for more information
                  </div>`,
@@ -341,31 +349,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_2e0446eac6e92154cf5d8fd05db2036b = L.marker(
+            var marker_fc3d5b99a5ae05192a12327cb656ff2e = L.marker(
                 [51.62254289797838, -8.88721201435851],
                 {
 }
-            ).addTo(feature_group_45362123bae160a9f002ff7676c865c5);
+            ).addTo(feature_group_c3035c7151b43b8be62850142cbc1d84);
         
     
-        var popup_2307bfbd8e6ddbbb90b43a899330e220 = L.popup({
+        var popup_1a5b5f5b0287c040b26c749d80a298d2 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_8dd8fe49100bc1cbc45febd90543baf2 = $(`<div id=&quot;html_8dd8fe49100bc1cbc45febd90543baf2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Co-operative café.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
-                popup_2307bfbd8e6ddbbb90b43a899330e220.setContent(html_8dd8fe49100bc1cbc45febd90543baf2);
+                var html_f88728e64ee68ed51e586af8af7824fb = $(`<div id=&quot;html_f88728e64ee68ed51e586af8af7824fb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Co-operative café.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_1a5b5f5b0287c040b26c749d80a298d2.setContent(html_f88728e64ee68ed51e586af8af7824fb);
             
         
 
-        marker_2e0446eac6e92154cf5d8fd05db2036b.bindPopup(popup_2307bfbd8e6ddbbb90b43a899330e220)
+        marker_fc3d5b99a5ae05192a12327cb656ff2e.bindPopup(popup_1a5b5f5b0287c040b26c749d80a298d2)
         ;
 
         
     
     
-            marker_2e0446eac6e92154cf5d8fd05db2036b.bindTooltip(
+            marker_fc3d5b99a5ae05192a12327cb656ff2e.bindTooltip(
                 `<div>
                      Location: Co-operative café. Click for more information
                  </div>`,
@@ -375,31 +383,31 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            var marker_bcd7fb317cb068994ca5644d8ce52b70 = L.marker(
+            var marker_b46b43ee004491d94f5601b18e761e98 = L.marker(
                 [51.62178548981129, -8.886985629245714],
                 {
 }
-            ).addTo(feature_group_45362123bae160a9f002ff7676c865c5);
+            ).addTo(feature_group_c3035c7151b43b8be62850142cbc1d84);
         
     
-        var popup_7178b92991818ae371d2a52735343432 = L.popup({
+        var popup_199cc8c0aceba9a26cbc734ef029cad2 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_3bb834fd11586cf00bc4514febf73ae4 = $(`<div id=&quot;html_3bb834fd11586cf00bc4514febf73ae4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Methodist hall.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
-                popup_7178b92991818ae371d2a52735343432.setContent(html_3bb834fd11586cf00bc4514febf73ae4);
+                var html_cabd965f8e8a3bdb7a4ab037ce72f6ff = $(`<div id=&quot;html_cabd965f8e8a3bdb7a4ab037ce72f6ff&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Methodist hall.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_199cc8c0aceba9a26cbc734ef029cad2.setContent(html_cabd965f8e8a3bdb7a4ab037ce72f6ff);
             
         
 
-        marker_bcd7fb317cb068994ca5644d8ce52b70.bindPopup(popup_7178b92991818ae371d2a52735343432)
+        marker_b46b43ee004491d94f5601b18e761e98.bindPopup(popup_199cc8c0aceba9a26cbc734ef029cad2)
         ;
 
         
     
     
-            marker_bcd7fb317cb068994ca5644d8ce52b70.bindTooltip(
+            marker_b46b43ee004491d94f5601b18e761e98.bindTooltip(
                 `<div>
                      Location: Methodist hall. Click for more information
                  </div>`,
@@ -409,23 +417,23 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            feature_group_45362123bae160a9f002ff7676c865c5.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+            feature_group_c3035c7151b43b8be62850142cbc1d84.addTo(map_dcdd889c87faa8fcd7259a7e9e94404e);
         
     
-            var feature_group_48314559ea74e18b0f08b9028ba5af08 = L.featureGroup(
+            var feature_group_40d9f53a12330bb020b88d9886c9d8e5 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_0535ee9718842703f42ea306e4b9e285 = L.marker(
+            var marker_fb6706d144b156158fb285847e75bca3 = L.marker(
                 [51.6228, -8.892],
                 {
 }
-            ).addTo(feature_group_48314559ea74e18b0f08b9028ba5af08);
+            ).addTo(feature_group_40d9f53a12330bb020b88d9886c9d8e5);
         
     
-            var icon_9140b5494dc2e6d5e22c53756c85bd81 = L.AwesomeMarkers.icon(
+            var icon_92e5e20c5050b6a06ec1c6eb3fd8a62a = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;orange&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -436,24 +444,24 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-        var popup_ffdcbb5349ea5a07d8628d2ba1a6edd1 = L.popup({
+        var popup_022f0b366e3e639e299ca66c5029df64 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_1d3924c6f784c5630583b612b849d532 = $(`<div id=&quot;html_1d3924c6f784c5630583b612b849d532&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Grocery shop.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
-                popup_ffdcbb5349ea5a07d8628d2ba1a6edd1.setContent(html_1d3924c6f784c5630583b612b849d532);
+                var html_b1b2b51c28edf905f027e68e94a27707 = $(`<div id=&quot;html_b1b2b51c28edf905f027e68e94a27707&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Grocery shop.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_022f0b366e3e639e299ca66c5029df64.setContent(html_b1b2b51c28edf905f027e68e94a27707);
             
         
 
-        marker_0535ee9718842703f42ea306e4b9e285.bindPopup(popup_ffdcbb5349ea5a07d8628d2ba1a6edd1)
+        marker_fb6706d144b156158fb285847e75bca3.bindPopup(popup_022f0b366e3e639e299ca66c5029df64)
         ;
 
         
     
     
-            marker_0535ee9718842703f42ea306e4b9e285.bindTooltip(
+            marker_fb6706d144b156158fb285847e75bca3.bindTooltip(
                 `<div>
                      Location: Grocery shop. Click for more information
                  </div>`,
@@ -463,17 +471,17 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-                marker_0535ee9718842703f42ea306e4b9e285.setIcon(icon_9140b5494dc2e6d5e22c53756c85bd81);
+                marker_fb6706d144b156158fb285847e75bca3.setIcon(icon_92e5e20c5050b6a06ec1c6eb3fd8a62a);
             
     
-            var marker_56415ee200094bfe0fa0441d84ff4f25 = L.marker(
+            var marker_6acbca782ea242d97a199bbe833c100d = L.marker(
                 [51.622, -8.891],
                 {
 }
-            ).addTo(feature_group_48314559ea74e18b0f08b9028ba5af08);
+            ).addTo(feature_group_40d9f53a12330bb020b88d9886c9d8e5);
         
     
-            var icon_afb75751b71d19465132535ee5d7889d = L.AwesomeMarkers.icon(
+            var icon_f63f0bccb475897a4abec704f993583b = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;orange&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -484,24 +492,24 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-        var popup_d9461c0d1ed9b17ead08c1b2a5bb2cde = L.popup({
+        var popup_36ff1ff270c812b832a16ff5e3cbe3b7 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_08a326101e9f0da20a05659a76dbf8ab = $(`<div id=&quot;html_08a326101e9f0da20a05659a76dbf8ab&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Cycling shop.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
-                popup_d9461c0d1ed9b17ead08c1b2a5bb2cde.setContent(html_08a326101e9f0da20a05659a76dbf8ab);
+                var html_04dc01d879ea65e2ec5f4c6fee333fa9 = $(`<div id=&quot;html_04dc01d879ea65e2ec5f4c6fee333fa9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Cycling shop.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_36ff1ff270c812b832a16ff5e3cbe3b7.setContent(html_04dc01d879ea65e2ec5f4c6fee333fa9);
             
         
 
-        marker_56415ee200094bfe0fa0441d84ff4f25.bindPopup(popup_d9461c0d1ed9b17ead08c1b2a5bb2cde)
+        marker_6acbca782ea242d97a199bbe833c100d.bindPopup(popup_36ff1ff270c812b832a16ff5e3cbe3b7)
         ;
 
         
     
     
-            marker_56415ee200094bfe0fa0441d84ff4f25.bindTooltip(
+            marker_6acbca782ea242d97a199bbe833c100d.bindTooltip(
                 `<div>
                      Location: Cycling shop. Click for more information
                  </div>`,
@@ -511,17 +519,17 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-                marker_56415ee200094bfe0fa0441d84ff4f25.setIcon(icon_afb75751b71d19465132535ee5d7889d);
+                marker_6acbca782ea242d97a199bbe833c100d.setIcon(icon_f63f0bccb475897a4abec704f993583b);
             
     
-            var marker_d35158592127c0bef5508fb733c1478a = L.marker(
+            var marker_c6cefc67a91c90ea677fe5cdee2a959a = L.marker(
                 [51.6223, -8.889],
                 {
 }
-            ).addTo(feature_group_48314559ea74e18b0f08b9028ba5af08);
+            ).addTo(feature_group_40d9f53a12330bb020b88d9886c9d8e5);
         
     
-            var icon_089a7de5f5c0c55fa977cd65ba328ab1 = L.AwesomeMarkers.icon(
+            var icon_bfdc9313c912b65ef525c640671d8cb4 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;orange&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -532,24 +540,24 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-        var popup_d5c97a25882614ef2f8b2156d6389c11 = L.popup({
+        var popup_b9cb0c7866c69062774b2993a713e8dd = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_f4159d618e6c3e122b350808bfc013aa = $(`<div id=&quot;html_f4159d618e6c3e122b350808bfc013aa&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Chemist.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
-                popup_d5c97a25882614ef2f8b2156d6389c11.setContent(html_f4159d618e6c3e122b350808bfc013aa);
+                var html_b4b1ff0f0706d59fcf24ef4480a4616c = $(`<div id=&quot;html_b4b1ff0f0706d59fcf24ef4480a4616c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Chemist.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_b9cb0c7866c69062774b2993a713e8dd.setContent(html_b4b1ff0f0706d59fcf24ef4480a4616c);
             
         
 
-        marker_d35158592127c0bef5508fb733c1478a.bindPopup(popup_d5c97a25882614ef2f8b2156d6389c11)
+        marker_c6cefc67a91c90ea677fe5cdee2a959a.bindPopup(popup_b9cb0c7866c69062774b2993a713e8dd)
         ;
 
         
     
     
-            marker_d35158592127c0bef5508fb733c1478a.bindTooltip(
+            marker_c6cefc67a91c90ea677fe5cdee2a959a.bindTooltip(
                 `<div>
                      Location: Chemist. Click for more information
                  </div>`,
@@ -559,17 +567,17 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-                marker_d35158592127c0bef5508fb733c1478a.setIcon(icon_089a7de5f5c0c55fa977cd65ba328ab1);
+                marker_c6cefc67a91c90ea677fe5cdee2a959a.setIcon(icon_bfdc9313c912b65ef525c640671d8cb4);
             
     
-            var marker_b9ab4129241c6fccbf2d3bfcfbe284c8 = L.marker(
+            var marker_021ab1b307788079536a6b074215412c = L.marker(
                 [51.6215, -8.887],
                 {
 }
-            ).addTo(feature_group_48314559ea74e18b0f08b9028ba5af08);
+            ).addTo(feature_group_40d9f53a12330bb020b88d9886c9d8e5);
         
     
-            var icon_c0622ca29ae0077900c3fe807605d8de = L.AwesomeMarkers.icon(
+            var icon_087e4cd1360614a5ffdc6077a3f7a201 = L.AwesomeMarkers.icon(
                 {
   &quot;markerColor&quot;: &quot;orange&quot;,
   &quot;iconColor&quot;: &quot;white&quot;,
@@ -580,24 +588,24 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-        var popup_3f073bee53b5491ce0a0e24067695bad = L.popup({
+        var popup_87aca7624c36af0000e25da4b69fae2e = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_8cb270d71005ae85957806074188e505 = $(`<div id=&quot;html_8cb270d71005ae85957806074188e505&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Dry cleaners.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
-                popup_3f073bee53b5491ce0a0e24067695bad.setContent(html_8cb270d71005ae85957806074188e505);
+                var html_6f9b5435de7ef7b24d36d53d812a6a02 = $(`<div id=&quot;html_6f9b5435de7ef7b24d36d53d812a6a02&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Dry cleaners.</br><b>Resource type: retail.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_87aca7624c36af0000e25da4b69fae2e.setContent(html_6f9b5435de7ef7b24d36d53d812a6a02);
             
         
 
-        marker_b9ab4129241c6fccbf2d3bfcfbe284c8.bindPopup(popup_3f073bee53b5491ce0a0e24067695bad)
+        marker_021ab1b307788079536a6b074215412c.bindPopup(popup_87aca7624c36af0000e25da4b69fae2e)
         ;
 
         
     
     
-            marker_b9ab4129241c6fccbf2d3bfcfbe284c8.bindTooltip(
+            marker_021ab1b307788079536a6b074215412c.bindTooltip(
                 `<div>
                      Location: Dry cleaners. Click for more information
                  </div>`,
@@ -607,40 +615,40 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-                marker_b9ab4129241c6fccbf2d3bfcfbe284c8.setIcon(icon_c0622ca29ae0077900c3fe807605d8de);
+                marker_021ab1b307788079536a6b074215412c.setIcon(icon_087e4cd1360614a5ffdc6077a3f7a201);
             
     
-            feature_group_48314559ea74e18b0f08b9028ba5af08.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+            feature_group_40d9f53a12330bb020b88d9886c9d8e5.addTo(map_dcdd889c87faa8fcd7259a7e9e94404e);
         
     
-            var feature_group_e6f5af3c4f2b333d069473f9811dc695 = L.featureGroup(
+            var feature_group_bb7720bc28894812c15966f3d4b532bf = L.featureGroup(
                 {
 }
             );
         
     
 
-        function geo_json_d70f4dce9809a0408d86d42b3e7fe845_onEachFeature(feature, layer) {
+        function geo_json_193475fbd158524faf1f99a82f0198e3_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_d70f4dce9809a0408d86d42b3e7fe845 = L.geoJson(null, {
-                onEachFeature: geo_json_d70f4dce9809a0408d86d42b3e7fe845_onEachFeature,
+        var geo_json_193475fbd158524faf1f99a82f0198e3 = L.geoJson(null, {
+                onEachFeature: geo_json_193475fbd158524faf1f99a82f0198e3_onEachFeature,
             
             ...{
 }
         });
 
-        function geo_json_d70f4dce9809a0408d86d42b3e7fe845_add (data) {
-            geo_json_d70f4dce9809a0408d86d42b3e7fe845
+        function geo_json_193475fbd158524faf1f99a82f0198e3_add (data) {
+            geo_json_193475fbd158524faf1f99a82f0198e3
                 .addData(data);
         }
-            geo_json_d70f4dce9809a0408d86d42b3e7fe845_add({&quot;bbox&quot;: [-8.913169563297714, 51.61283136590018, -8.877505720375659, 51.629940834011705], &quot;features&quot;: [{&quot;bbox&quot;: [-8.913169563297714, 51.61283136590018, -8.877505720375659, 51.629940834011705], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-8.880478935328853, 51.62060578154822], [-8.880668675111432, 51.62127315067259], [-8.882827954033061, 51.621973046255356], [-8.883528416324923, 51.62232300852135], [-8.881519322864907, 51.62320422039247], [-8.879040198255776, 51.623854085408894], [-8.877505720375659, 51.6239959392226], [-8.879266329227042, 51.62574079439028], [-8.882206600383132, 51.62685793528044], [-8.8882737374826, 51.62476657881866], [-8.888184925810634, 51.625451347264104], [-8.88712710581853, 51.625926886904736], [-8.887118005661346, 51.6263025684723], [-8.88431917277542, 51.62742010847718], [-8.885017196002241, 51.62832841562117], [-8.884029987366567, 51.62855673953722], [-8.88412570929345, 51.629940834011705], [-8.887002063793055, 51.62923272360204], [-8.887182047314477, 51.62967531722164], [-8.889327375778873, 51.62695367550896], [-8.890999607791382, 51.6260115530657], [-8.892072272023608, 51.62655824423537], [-8.893955289584003, 51.62658152356522], [-8.89448927963832, 51.62707005309396], [-8.897206071143174, 51.62748881992805], [-8.906124641877767, 51.623534134197826], [-8.906349479795125, 51.62320843501189], [-8.906124641877767, 51.62181255487815], [-8.906049695904983, 51.62055622604211], [-8.90919742675203, 51.620090910238986], [-8.908672804944501, 51.61878800060623], [-8.906649263685296, 51.618694934201045], [-8.906649263685296, 51.617857327965936], [-8.913169563297714, 51.61701970627098], [-8.91204537370885, 51.6145067484282], [-8.909347318697627, 51.615297879792564], [-8.906949047575438, 51.6149721214893], [-8.903126802975379, 51.61539095316414], [-8.902976911030777, 51.61590285329612], [-8.900803477825946, 51.616135533265776], [-8.900728531854213, 51.61729891522023], [-8.902452289222282, 51.61767119114725], [-8.902677127140663, 51.61822959931234], [-8.900503693935832, 51.61841573384041], [-8.899304558375263, 51.617857327965936], [-8.897805638924524, 51.61878800060623], [-8.897355963088785, 51.61808999791512], [-8.896531557391171, 51.61608899736714], [-8.897131125171484, 51.61501865853276], [-8.896156827528273, 51.614180984446705], [-8.89458296210475, 51.61283136590018], [-8.892484474872731, 51.61478597283758], [-8.893084042654039, 51.61580978097433], [-8.892334582928157, 51.616461283219195], [-8.891135447367617, 51.61701970627098], [-8.888887068191025, 51.61897413284399], [-8.886713634987188, 51.61892759985628], [-8.885664391371193, 51.62027703713281], [-8.881692254825538, 51.619392926394994], [-8.880478935328853, 51.62060578154822]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;name&quot;: &quot;Clonakilty town boundary&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
-        geo_json_d70f4dce9809a0408d86d42b3e7fe845.setStyle(function(feature) {return feature.properties.style;});
+            geo_json_193475fbd158524faf1f99a82f0198e3_add({&quot;bbox&quot;: [-8.913169563297714, 51.61283136590018, -8.877505720375659, 51.629940834011705], &quot;features&quot;: [{&quot;bbox&quot;: [-8.913169563297714, 51.61283136590018, -8.877505720375659, 51.629940834011705], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-8.880478935328853, 51.62060578154822], [-8.880668675111432, 51.62127315067259], [-8.882827954033061, 51.621973046255356], [-8.883528416324923, 51.62232300852135], [-8.881519322864907, 51.62320422039247], [-8.879040198255776, 51.623854085408894], [-8.877505720375659, 51.6239959392226], [-8.879266329227042, 51.62574079439028], [-8.882206600383132, 51.62685793528044], [-8.8882737374826, 51.62476657881866], [-8.888184925810634, 51.625451347264104], [-8.88712710581853, 51.625926886904736], [-8.887118005661346, 51.6263025684723], [-8.88431917277542, 51.62742010847718], [-8.885017196002241, 51.62832841562117], [-8.884029987366567, 51.62855673953722], [-8.88412570929345, 51.629940834011705], [-8.887002063793055, 51.62923272360204], [-8.887182047314477, 51.62967531722164], [-8.889327375778873, 51.62695367550896], [-8.890999607791382, 51.6260115530657], [-8.892072272023608, 51.62655824423537], [-8.893955289584003, 51.62658152356522], [-8.89448927963832, 51.62707005309396], [-8.897206071143174, 51.62748881992805], [-8.906124641877767, 51.623534134197826], [-8.906349479795125, 51.62320843501189], [-8.906124641877767, 51.62181255487815], [-8.906049695904983, 51.62055622604211], [-8.90919742675203, 51.620090910238986], [-8.908672804944501, 51.61878800060623], [-8.906649263685296, 51.618694934201045], [-8.906649263685296, 51.617857327965936], [-8.913169563297714, 51.61701970627098], [-8.91204537370885, 51.6145067484282], [-8.909347318697627, 51.615297879792564], [-8.906949047575438, 51.6149721214893], [-8.903126802975379, 51.61539095316414], [-8.902976911030777, 51.61590285329612], [-8.900803477825946, 51.616135533265776], [-8.900728531854213, 51.61729891522023], [-8.902452289222282, 51.61767119114725], [-8.902677127140663, 51.61822959931234], [-8.900503693935832, 51.61841573384041], [-8.899304558375263, 51.617857327965936], [-8.897805638924524, 51.61878800060623], [-8.897355963088785, 51.61808999791512], [-8.896531557391171, 51.61608899736714], [-8.897131125171484, 51.61501865853276], [-8.896156827528273, 51.614180984446705], [-8.89458296210475, 51.61283136590018], [-8.892484474872731, 51.61478597283758], [-8.893084042654039, 51.61580978097433], [-8.892334582928157, 51.616461283219195], [-8.891135447367617, 51.61701970627098], [-8.888887068191025, 51.61897413284399], [-8.886713634987188, 51.61892759985628], [-8.885664391371193, 51.62027703713281], [-8.881692254825538, 51.619392926394994], [-8.880478935328853, 51.62060578154822]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;name&quot;: &quot;Clonakilty town boundary&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+        geo_json_193475fbd158524faf1f99a82f0198e3.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_d70f4dce9809a0408d86d42b3e7fe845.bindTooltip(
+            geo_json_193475fbd158524faf1f99a82f0198e3.bindTooltip(
                 `<div>
                      Clonakilty town centre. Layers like this could include heatmaps.
                  </div>`,
@@ -650,33 +658,33 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            geo_json_d70f4dce9809a0408d86d42b3e7fe845.addTo(feature_group_e6f5af3c4f2b333d069473f9811dc695);
+            geo_json_193475fbd158524faf1f99a82f0198e3.addTo(feature_group_bb7720bc28894812c15966f3d4b532bf);
         
     
-            feature_group_e6f5af3c4f2b333d069473f9811dc695.addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+            feature_group_bb7720bc28894812c15966f3d4b532bf.addTo(map_dcdd889c87faa8fcd7259a7e9e94404e);
         
     
-            var layer_control_99577596b4cd244a785674598a4f08c9_layers = {
+            var layer_control_824aa54ba69c22c20abf686e9b3d78b9_layers = {
                 base_layers : {
-                    &quot;Traditional&quot; : tile_layer_fa7b3ab90511efdcfd6f4ac495361394,
-                    &quot;Minimal&quot; : tile_layer_13dec7acc106430a1d66c11efa67c619,
-                    &quot;Esri Satellite&quot; : tile_layer_42f90f58b093f1e477b5c55885c02007,
+                    &quot;Traditional&quot; : tile_layer_42532a10e0fda52ad62e67a49d79ac75,
+                    &quot;Minimal&quot; : tile_layer_e11356ec474b4bb751dde295e7be4c6a,
+                    &quot;Esri Satellite&quot; : tile_layer_d5a214b7e1db7ed87d9b93494abda096,
                 },
                 overlays :  {
-                    &quot;Community resources&quot; : feature_group_45362123bae160a9f002ff7676c865c5,
-                    &quot;Retailers&quot; : feature_group_48314559ea74e18b0f08b9028ba5af08,
-                    &quot;Clonakilty town boundary&quot; : feature_group_e6f5af3c4f2b333d069473f9811dc695,
+                    &quot;Community resources&quot; : feature_group_c3035c7151b43b8be62850142cbc1d84,
+                    &quot;Retailers&quot; : feature_group_40d9f53a12330bb020b88d9886c9d8e5,
+                    &quot;Clonakilty town boundary&quot; : feature_group_bb7720bc28894812c15966f3d4b532bf,
                 },
             };
-            let layer_control_99577596b4cd244a785674598a4f08c9 = L.control.layers(
-                layer_control_99577596b4cd244a785674598a4f08c9_layers.base_layers,
-                layer_control_99577596b4cd244a785674598a4f08c9_layers.overlays,
+            let layer_control_824aa54ba69c22c20abf686e9b3d78b9 = L.control.layers(
+                layer_control_824aa54ba69c22c20abf686e9b3d78b9_layers.base_layers,
+                layer_control_824aa54ba69c22c20abf686e9b3d78b9_layers.overlays,
                 {
   &quot;position&quot;: &quot;topright&quot;,
   &quot;collapsed&quot;: true,
   &quot;autoZIndex&quot;: true,
 }
-            ).addTo(map_9ddc59976bed7686fdc0e711a365dce9);
+            ).addTo(map_dcdd889c87faa8fcd7259a7e9e94404e);
 
         
 </script>
@@ -688,7 +696,7 @@ ul.task-list li input[type="checkbox"] {
 <p>This searchable table could be provided alongside the map with additional filtering capabilities, and link to the map, highlighting data selected in the table.</p>
 <div class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
-<table id="itables_a48d47ed_67b9_45ae_9651_882878d627bc" class="display nowrap" data-quarto-disable-processing="true" style="table-layout:auto;width:auto;margin:auto;caption-side:bottom"><caption><p>Interactive Points of Interest in Clonakilty</p> {#3b308785}</caption>
+<table id="itables_4a9c2c43_4673_415c_8c7f_7336a2bdf690" class="display nowrap" data-quarto-disable-processing="true" style="table-layout:auto;width:auto;margin:auto;caption-side:bottom"><caption><p>Interactive Points of Interest in Clonakilty</p> {#20f9c623}</caption>
 <thead>
     <tr style="text-align: right;">
       
@@ -764,7 +772,7 @@ Loading ITables v2.2.5 from the internet...
 <script type="module">
     import {DataTable, jQuery as $} from 'https://www.unpkg.com/dt_for_itables@2.0.13/dt_bundle.js';
 
-    document.querySelectorAll("#itables_a48d47ed_67b9_45ae_9651_882878d627bc:not(.dataTable)").forEach(table => {
+    document.querySelectorAll("#itables_4a9c2c43_4673_415c_8c7f_7336a2bdf690:not(.dataTable)").forEach(table => {
         if (!(table instanceof HTMLTableElement))
             return;
 

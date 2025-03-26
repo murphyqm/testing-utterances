@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Example dashboard</title>
+<title>Setting up js and comments – Example dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +23,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -66,9 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -95,11 +92,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./test-js.html"> 
+    <a class="nav-link active" href="./test-js.html" aria-current="page"> 
 <span class="menu-text">Setting up js and comments</span></a>
   </li>  
   <li class="nav-item compact">
@@ -125,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Setting up js and comments</h1>
 </div>
 
 
@@ -142,322 +139,52 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We can have multiple pages with various embedded interactive visualisations, to help provide context and support and to make the tool more useful.</p>
-<p>Additionally, the website can be themed and styled to match other resources.</p>
-<div class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<table class="caption-top table table-sm table-striped small">
-<caption>Data can also be presented in a more report-like format</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Name</th>
-<th style="text-align: center;">Longitude</th>
-<th style="text-align: center;">Latitude</th>
-<th style="text-align: left;">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Community centre</td>
-<td style="text-align: center;">-8.89383</td>
-<td style="text-align: center;">51.6227</td>
-<td style="text-align: left;">Community Resources</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Parish hall</td>
-<td style="text-align: center;">-8.89022</td>
-<td style="text-align: center;">51.6217</td>
-<td style="text-align: left;">Community Resources</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Co-operative café</td>
-<td style="text-align: center;">-8.88721</td>
-<td style="text-align: center;">51.6225</td>
-<td style="text-align: left;">Community Resources</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Methodist hall</td>
-<td style="text-align: center;">-8.88699</td>
-<td style="text-align: center;">51.6218</td>
-<td style="text-align: left;">Community Resources</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Grocery shop</td>
-<td style="text-align: center;">-8.892</td>
-<td style="text-align: center;">51.6228</td>
-<td style="text-align: left;">Retailers</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Cycling shop</td>
-<td style="text-align: center;">-8.891</td>
-<td style="text-align: center;">51.622</td>
-<td style="text-align: left;">Retailers</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Chemist</td>
-<td style="text-align: center;">-8.889</td>
-<td style="text-align: center;">51.6223</td>
-<td style="text-align: left;">Retailers</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Dry cleaners</td>
-<td style="text-align: center;">-8.887</td>
-<td style="text-align: center;">51.6215</td>
-<td style="text-align: left;">Retailers</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="a8552d81" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="2">
-<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
-<html>
-<head>
-    
-    <meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; />
-    
-        <script>
-            L_NO_TOUCH = false;
-            L_DISABLE_3D = false;
-        </script>
-    
-    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
-    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
-    <script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;></script>
-    <script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;></script>
-    <script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;></script>
-    <script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;></script>
-    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/>
-    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/>
-    <link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/>
-    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/>
-    <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/>
-    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/>
-    
-            <meta name=&quot;viewport&quot; content=&quot;width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
-            <style>
-                #map_e0ec88acf63c23ee1b0ead198359fc15 {
-                    position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
-                }
-                .leaflet-container { font-size: 1rem; }
-            </style>
-        
-</head>
-<body>
-    
-    
-            <div class=&quot;folium-map&quot; id=&quot;map_e0ec88acf63c23ee1b0ead198359fc15&quot; ></div>
-        
-</body>
-<script>
-    
-    
-            var map_e0ec88acf63c23ee1b0ead198359fc15 = L.map(
-                &quot;map_e0ec88acf63c23ee1b0ead198359fc15&quot;,
-                {
-                    center: [53.349805, -6.26031],
-                    crs: L.CRS.EPSG3857,
-                    ...{
-  &quot;zoom&quot;: 6,
-  &quot;zoomControl&quot;: true,
-  &quot;preferCanvas&quot;: false,
-}
-
-                }
-            );
-
-            
-
-        
-    
-            var tile_layer_e45b3dc3736243bca173b6d02fe76b2c = L.tileLayer(
-                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
-                {
-  &quot;minZoom&quot;: 0,
-  &quot;maxZoom&quot;: 19,
-  &quot;maxNativeZoom&quot;: 19,
-  &quot;noWrap&quot;: false,
-  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
-  &quot;subdomains&quot;: &quot;abc&quot;,
-  &quot;detectRetina&quot;: false,
-  &quot;tms&quot;: false,
-  &quot;opacity&quot;: 1,
-}
-
-            );
-        
-    
-            tile_layer_e45b3dc3736243bca173b6d02fe76b2c.addTo(map_e0ec88acf63c23ee1b0ead198359fc15);
-        
-    
-            var feature_group_b4b8fdb13c62cfe1a58c93cf6244aa1b = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var marker_b6277ed50c1d32ac0c7e29e19ca94a79 = L.marker(
-                [53.349805, -6.26031],
-                {
-}
-            ).addTo(feature_group_b4b8fdb13c62cfe1a58c93cf6244aa1b);
-        
-    
-        var popup_d9f913f32f10497bb56bbb4ebf5c6270 = L.popup({
-  &quot;maxWidth&quot;: &quot;100%&quot;,
-});
-
-        
-            
-                var html_609d736cde8cdb940ee3a1587d6cde15 = $(`<div id=&quot;html_609d736cde8cdb940ee3a1587d6cde15&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Dublin</div>`)[0];
-                popup_d9f913f32f10497bb56bbb4ebf5c6270.setContent(html_609d736cde8cdb940ee3a1587d6cde15);
-            
-        
-
-        marker_b6277ed50c1d32ac0c7e29e19ca94a79.bindPopup(popup_d9f913f32f10497bb56bbb4ebf5c6270)
-        ;
-
-        
-    
-    
-            var marker_b8bc59d1f97f959b2a2d1b13fb3688e7 = L.marker(
-                [51.8985, -8.4756],
-                {
-}
-            ).addTo(feature_group_b4b8fdb13c62cfe1a58c93cf6244aa1b);
-        
-    
-        var popup_51a7e7ca5a5a2d8a5abad3239ee2f2e6 = L.popup({
-  &quot;maxWidth&quot;: &quot;100%&quot;,
-});
-
-        
-            
-                var html_e4cac08b1833baa3bd8f2203c2b4f4a9 = $(`<div id=&quot;html_e4cac08b1833baa3bd8f2203c2b4f4a9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Cork</div>`)[0];
-                popup_51a7e7ca5a5a2d8a5abad3239ee2f2e6.setContent(html_e4cac08b1833baa3bd8f2203c2b4f4a9);
-            
-        
-
-        marker_b8bc59d1f97f959b2a2d1b13fb3688e7.bindPopup(popup_51a7e7ca5a5a2d8a5abad3239ee2f2e6)
-        ;
-
-        
-    
-    
-            var marker_7715920a2e3641db2b63e0f81d1b5af1 = L.marker(
-                [53.2707, -9.0568],
-                {
-}
-            ).addTo(feature_group_b4b8fdb13c62cfe1a58c93cf6244aa1b);
-        
-    
-        var popup_93c5c9b0bf74ca19605041a04c930af8 = L.popup({
-  &quot;maxWidth&quot;: &quot;100%&quot;,
-});
-
-        
-            
-                var html_6809916966619ae53c7b026f2f41285f = $(`<div id=&quot;html_6809916966619ae53c7b026f2f41285f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Galway</div>`)[0];
-                popup_93c5c9b0bf74ca19605041a04c930af8.setContent(html_6809916966619ae53c7b026f2f41285f);
-            
-        
-
-        marker_7715920a2e3641db2b63e0f81d1b5af1.bindPopup(popup_93c5c9b0bf74ca19605041a04c930af8)
-        ;
-
-        
-    
-    
-            var marker_05ba901c670876977cb4f2fed85c1718 = L.marker(
-                [52.6638, -8.6267],
-                {
-}
-            ).addTo(feature_group_b4b8fdb13c62cfe1a58c93cf6244aa1b);
-        
-    
-        var popup_578277bc1cb752d7c44ad51ac61dab2a = L.popup({
-  &quot;maxWidth&quot;: &quot;100%&quot;,
-});
-
-        
-            
-                var html_9b3d81060effc061e99988ff5bf96cfe = $(`<div id=&quot;html_9b3d81060effc061e99988ff5bf96cfe&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Limerick</div>`)[0];
-                popup_578277bc1cb752d7c44ad51ac61dab2a.setContent(html_9b3d81060effc061e99988ff5bf96cfe);
-            
-        
-
-        marker_05ba901c670876977cb4f2fed85c1718.bindPopup(popup_578277bc1cb752d7c44ad51ac61dab2a)
-        ;
-
-        
-    
-    
-            feature_group_b4b8fdb13c62cfe1a58c93cf6244aa1b.addTo(map_e0ec88acf63c23ee1b0ead198359fc15);
-        
-    
-            var feature_group_ec4badec174767fd387ccab2309841d9 = L.featureGroup(
-                {
-}
-            );
-        
-    
-
-        function geo_json_ca80449b7cce3f92ab758d1a49cbc061_onEachFeature(feature, layer) {
-            layer.on({
-            });
-        };
-        var geo_json_ca80449b7cce3f92ab758d1a49cbc061 = L.geoJson(null, {
-                onEachFeature: geo_json_ca80449b7cce3f92ab758d1a49cbc061_onEachFeature,
-            
-            ...{
-}
-        });
-
-        function geo_json_ca80449b7cce3f92ab758d1a49cbc061_add (data) {
-            geo_json_ca80449b7cce3f92ab758d1a49cbc061
-                .addData(data);
+<pre class="{html}"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Interactive Map Example&lt;/title&gt;
+    &lt;!-- Leaflet CSS --&gt;
+    &lt;link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /&gt;
+    &lt;style&gt;
+        /* Set the height of the map container */
+        #map {
+            height: 500px;
+            width: 100%;
         }
-            geo_json_ca80449b7cce3f92ab758d1a49cbc061_add({&quot;bbox&quot;: [-10.0, 51.0, -5.0, 55.0], &quot;features&quot;: [{&quot;bbox&quot;: [-10.0, 51.0, -5.0, 55.0], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-10.0, 51.0], [-10.0, 55.0], [-5.0, 55.0], [-5.0, 51.0], [-10.0, 51.0]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;name&quot;: &quot;Region&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
-        geo_json_ca80449b7cce3f92ab758d1a49cbc061.setStyle(function(feature) {return feature.properties.style;});
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Interactive Map with Leaflet.js&lt;/h1&gt;
+    &lt;!-- Map container --&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
 
-        
-    
-            geo_json_ca80449b7cce3f92ab758d1a49cbc061.addTo(feature_group_ec4badec174767fd387ccab2309841d9);
-        
-    
-            feature_group_ec4badec174767fd387ccab2309841d9.addTo(map_e0ec88acf63c23ee1b0ead198359fc15);
-        
-    
-            var layer_control_dc8a64f5142952d5a06e2bfb95ac90fe_layers = {
-                base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_e45b3dc3736243bca173b6d02fe76b2c,
-                },
-                overlays :  {
-                    &quot;Cities&quot; : feature_group_b4b8fdb13c62cfe1a58c93cf6244aa1b,
-                    &quot;Ireland Region&quot; : feature_group_ec4badec174767fd387ccab2309841d9,
-                },
-            };
-            let layer_control_dc8a64f5142952d5a06e2bfb95ac90fe = L.control.layers(
-                layer_control_dc8a64f5142952d5a06e2bfb95ac90fe_layers.base_layers,
-                layer_control_dc8a64f5142952d5a06e2bfb95ac90fe_layers.overlays,
-                {
-  &quot;position&quot;: &quot;topright&quot;,
-  &quot;collapsed&quot;: true,
-  &quot;autoZIndex&quot;: true,
-}
-            ).addTo(map_e0ec88acf63c23ee1b0ead198359fc15);
+    &lt;!-- Leaflet JS --&gt;
+    &lt;script src="https://unpkg.com/leaflet/dist/leaflet.js"&gt;&lt;/script&gt;
 
+    &lt;script&gt;
+        // Initialize the map and set its view to a specific geographical location and zoom level
+        var map = L.map('map').setView([51.505, -0.09], 13); // Example: London coordinates
+
+        // Add OpenStreetMap tiles as the map layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'
+        }).addTo(map);
+
+        // Example of adding a marker to the map at a specific location with a popup
+        L.marker([51.5, -0.09]).addTo(map)
+            .bindPopup('&lt;b&gt;Hello world!&lt;/b&gt;&lt;br&gt;I am a popup.')
+            .openPopup();
         
-</script>
-</html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
-</div>
-</div>
+        // Another example marker
+        L.marker([51.51, -0.1]).addTo(map)
+            .bindPopup('&lt;b&gt;Another Location!&lt;/b&gt;&lt;br&gt;Here is some info.')
+            .openPopup();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
 
 
