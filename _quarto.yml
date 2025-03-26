@@ -18,6 +18,9 @@ format:
   html:
     theme: cosmo
     toc: true
+    comments:
+      utterances:
+         repo: murphyqm/testing-utterances
 
 
 
