@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Example dashboard</title>
+<title>Interactive Map with Utterances – Example dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -107,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./new_comments_example.html"> 
+    <a class="nav-link active" href="./new_comments_example.html" aria-current="page"> 
 <span class="menu-text">Interactive Map with Utterances</span></a>
   </li>  
 </ul>
@@ -121,15 +121,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#interactive-map" id="toc-interactive-map" class="nav-link active" data-scroll-target="#interactive-map">Interactive Map</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Interactive Map with Utterances</h1>
 </div>
 
 
@@ -146,75 +152,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We can have multiple pages with various embedded interactive visualisations, to help provide context and support and to make the tool more useful.</p>
-<p>Additionally, the website can be themed and styled to match other resources.</p>
-<div class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
-<table class="caption-top table table-sm table-striped small">
-<caption>Data can also be presented in a more report-like format</caption>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Name</th>
-<th style="text-align: center;">Longitude</th>
-<th style="text-align: center;">Latitude</th>
-<th style="text-align: left;">Type</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Community centre</td>
-<td style="text-align: center;">-8.89383</td>
-<td style="text-align: center;">51.6227</td>
-<td style="text-align: left;">Community Resources</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Parish hall</td>
-<td style="text-align: center;">-8.89022</td>
-<td style="text-align: center;">51.6217</td>
-<td style="text-align: left;">Community Resources</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Co-operative café</td>
-<td style="text-align: center;">-8.88721</td>
-<td style="text-align: center;">51.6225</td>
-<td style="text-align: left;">Community Resources</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Methodist hall</td>
-<td style="text-align: center;">-8.88699</td>
-<td style="text-align: center;">51.6218</td>
-<td style="text-align: left;">Community Resources</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Grocery shop</td>
-<td style="text-align: center;">-8.892</td>
-<td style="text-align: center;">51.6228</td>
-<td style="text-align: left;">Retailers</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Cycling shop</td>
-<td style="text-align: center;">-8.891</td>
-<td style="text-align: center;">51.622</td>
-<td style="text-align: left;">Retailers</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Chemist</td>
-<td style="text-align: center;">-8.889</td>
-<td style="text-align: center;">51.6223</td>
-<td style="text-align: left;">Retailers</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Dry cleaners</td>
-<td style="text-align: center;">-8.887</td>
-<td style="text-align: center;">51.6215</td>
-<td style="text-align: left;">Retailers</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="296d2c34" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="2">
+<section id="interactive-map" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-map">Interactive Map</h2>
+<p>This is a very simple prototype dashboard. Mouse around the map below, and use the layers menu (top right-hand corner of the map) to view different map layers and resources, which can be toggled.</p>
+<p>Providing a sortable, searchable table of the underlying data also improves accessibility.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Map of Community Resources</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">User Comments with Utterances</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="8ae13427" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -&gt; Trust Notebook</span><iframe srcdoc="<!DOCTYPE html>
 <html>
 <head>
@@ -242,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
             <meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; />
             <style>
-                #map_b0bfc6b286748663d80e33f1db6ecd3a {
+                #map_8d1d6685de814d4d96def74b59e287cf {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -256,19 +203,19 @@ ul.task-list li input[type="checkbox"] {
 <body>
     
     
-            <div class=&quot;folium-map&quot; id=&quot;map_b0bfc6b286748663d80e33f1db6ecd3a&quot; ></div>
+            <div class=&quot;folium-map&quot; id=&quot;map_8d1d6685de814d4d96def74b59e287cf&quot; ></div>
         
 </body>
 <script>
     
     
-            var map_b0bfc6b286748663d80e33f1db6ecd3a = L.map(
-                &quot;map_b0bfc6b286748663d80e33f1db6ecd3a&quot;,
+            var map_8d1d6685de814d4d96def74b59e287cf = L.map(
+                &quot;map_8d1d6685de814d4d96def74b59e287cf&quot;,
                 {
-                    center: [53.349805, -6.26031],
+                    center: [51.6223, -8.889],
                     crs: L.CRS.EPSG3857,
                     ...{
-  &quot;zoom&quot;: 6,
+  &quot;zoom&quot;: 16,
   &quot;zoomControl&quot;: true,
   &quot;preferCanvas&quot;: false,
 }
@@ -280,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 
         
     
-            var tile_layer_b348bfc28115dde21a23db4ce5d22033 = L.tileLayer(
+            var tile_layer_3aa11db8ebed8ebd9aa735e80fcdf24e = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -297,173 +244,318 @@ ul.task-list li input[type="checkbox"] {
             );
         
     
-            tile_layer_b348bfc28115dde21a23db4ce5d22033.addTo(map_b0bfc6b286748663d80e33f1db6ecd3a);
+            tile_layer_3aa11db8ebed8ebd9aa735e80fcdf24e.addTo(map_8d1d6685de814d4d96def74b59e287cf);
         
     
-            var feature_group_2cecd27cecdec9c53d031f65fea0c5d7 = L.featureGroup(
+            var tile_layer_fe22170b1662acd6e2429a00179187ee = L.tileLayer(
+                &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 20,
+  &quot;maxNativeZoom&quot;: 20,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;,
+  &quot;subdomains&quot;: &quot;abcd&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_fe22170b1662acd6e2429a00179187ee.addTo(map_8d1d6685de814d4d96def74b59e287cf);
+        
+    
+            var tile_layer_64ca0da134271a8d5b7225824cb6309b = L.tileLayer(
+                &quot;https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 18,
+  &quot;maxNativeZoom&quot;: 18,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;Esri&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_64ca0da134271a8d5b7225824cb6309b.addTo(map_8d1d6685de814d4d96def74b59e287cf);
+        
+    
+            var feature_group_0ffbca9c9208c8cf091eb9539c117312 = L.featureGroup(
                 {
 }
             );
         
     
-            var marker_010ee13643baea2f0d0889c5bcf1c0b8 = L.marker(
-                [53.349805, -6.26031],
+            var marker_feda6fef3fc2af2640d09e578478bd25 = L.marker(
+                [51.62269906303828, -8.893827490473342],
                 {
 }
-            ).addTo(feature_group_2cecd27cecdec9c53d031f65fea0c5d7);
+            ).addTo(feature_group_0ffbca9c9208c8cf091eb9539c117312);
         
     
-        var popup_100c12b9b24187dd32b8332686d1e687 = L.popup({
+        var popup_72dec3c817e29d4e91674bacfc4b2888 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_28abfb24a446fc951215531a9224fb87 = $(`<div id=&quot;html_28abfb24a446fc951215531a9224fb87&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Dublin</div>`)[0];
-                popup_100c12b9b24187dd32b8332686d1e687.setContent(html_28abfb24a446fc951215531a9224fb87);
+                var html_cc1c0a34b6f134504532f15ae0b596a5 = $(`<div id=&quot;html_cc1c0a34b6f134504532f15ae0b596a5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Community centre.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_72dec3c817e29d4e91674bacfc4b2888.setContent(html_cc1c0a34b6f134504532f15ae0b596a5);
             
         
 
-        marker_010ee13643baea2f0d0889c5bcf1c0b8.bindPopup(popup_100c12b9b24187dd32b8332686d1e687)
+        marker_feda6fef3fc2af2640d09e578478bd25.bindPopup(popup_72dec3c817e29d4e91674bacfc4b2888)
         ;
 
         
     
     
-            var marker_0ce09851f6b24a6b219cee531e0dd5c7 = L.marker(
-                [51.8985, -8.4756],
+            marker_feda6fef3fc2af2640d09e578478bd25.bindTooltip(
+                `<div>
+                     Location: Community centre. Click for more information
+                 </div>`,
                 {
+  &quot;sticky&quot;: true,
 }
-            ).addTo(feature_group_2cecd27cecdec9c53d031f65fea0c5d7);
+            );
         
     
-        var popup_a98d026766607b48fef813f180e53b82 = L.popup({
+            var marker_2e2500f2bea9d2161c815a488a2fe74f = L.marker(
+                [51.621676172124666, -8.890217905596785],
+                {
+}
+            ).addTo(feature_group_0ffbca9c9208c8cf091eb9539c117312);
+        
+    
+        var popup_2cc8266abac830defdb29ea513fe3e87 = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_1031b1ead047d7dc4c7113806b2af169 = $(`<div id=&quot;html_1031b1ead047d7dc4c7113806b2af169&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Cork</div>`)[0];
-                popup_a98d026766607b48fef813f180e53b82.setContent(html_1031b1ead047d7dc4c7113806b2af169);
+                var html_a4bd7098a1339cabd596998ea81a44cc = $(`<div id=&quot;html_a4bd7098a1339cabd596998ea81a44cc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Parish hall.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_2cc8266abac830defdb29ea513fe3e87.setContent(html_a4bd7098a1339cabd596998ea81a44cc);
             
         
 
-        marker_0ce09851f6b24a6b219cee531e0dd5c7.bindPopup(popup_a98d026766607b48fef813f180e53b82)
+        marker_2e2500f2bea9d2161c815a488a2fe74f.bindPopup(popup_2cc8266abac830defdb29ea513fe3e87)
         ;
 
         
     
     
-            var marker_a4a7142d03f5522a3753fa8afaf9736c = L.marker(
-                [53.2707, -9.0568],
+            marker_2e2500f2bea9d2161c815a488a2fe74f.bindTooltip(
+                `<div>
+                     Location: Parish hall. Click for more information
+                 </div>`,
                 {
+  &quot;sticky&quot;: true,
 }
-            ).addTo(feature_group_2cecd27cecdec9c53d031f65fea0c5d7);
+            );
         
     
-        var popup_e187ba8383a575ca64b4c18b33c3335d = L.popup({
+            var marker_418579517564016bd45afb413a1fd142 = L.marker(
+                [51.62254289797838, -8.88721201435851],
+                {
+}
+            ).addTo(feature_group_0ffbca9c9208c8cf091eb9539c117312);
+        
+    
+        var popup_8f7c9904f26230fd508b3a55e155901f = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_5667eedc0c518c765149ad64cee38e8d = $(`<div id=&quot;html_5667eedc0c518c765149ad64cee38e8d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Galway</div>`)[0];
-                popup_e187ba8383a575ca64b4c18b33c3335d.setContent(html_5667eedc0c518c765149ad64cee38e8d);
+                var html_0c40d5899cd9f9043570d45a304e1185 = $(`<div id=&quot;html_0c40d5899cd9f9043570d45a304e1185&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Co-operative café.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_8f7c9904f26230fd508b3a55e155901f.setContent(html_0c40d5899cd9f9043570d45a304e1185);
             
         
 
-        marker_a4a7142d03f5522a3753fa8afaf9736c.bindPopup(popup_e187ba8383a575ca64b4c18b33c3335d)
+        marker_418579517564016bd45afb413a1fd142.bindPopup(popup_8f7c9904f26230fd508b3a55e155901f)
         ;
 
         
     
     
-            var marker_ca12accf686b422fdf1200805d74418a = L.marker(
-                [52.6638, -8.6267],
+            marker_418579517564016bd45afb413a1fd142.bindTooltip(
+                `<div>
+                     Location: Co-operative café. Click for more information
+                 </div>`,
                 {
+  &quot;sticky&quot;: true,
 }
-            ).addTo(feature_group_2cecd27cecdec9c53d031f65fea0c5d7);
+            );
         
     
-        var popup_11698de711e8c202e7faf3e4cfe356ae = L.popup({
+            var marker_21ddf12b15f8bb7a8714cf0e1d18a267 = L.marker(
+                [51.62178548981129, -8.886985629245714],
+                {
+}
+            ).addTo(feature_group_0ffbca9c9208c8cf091eb9539c117312);
+        
+    
+        var popup_858df26a68213cb91344a09565cb427a = L.popup({
   &quot;maxWidth&quot;: &quot;100%&quot;,
 });
 
         
             
-                var html_5219fee48cfefe6da333d14c39782691 = $(`<div id=&quot;html_5219fee48cfefe6da333d14c39782691&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Limerick</div>`)[0];
-                popup_11698de711e8c202e7faf3e4cfe356ae.setContent(html_5219fee48cfefe6da333d14c39782691);
+                var html_2de03948abb72e40d2c72758282602e3 = $(`<div id=&quot;html_2de03948abb72e40d2c72758282602e3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;>Methodist hall.</br><b>Resource type: community resource.</b></br></br>More information can go here; this stays open until you exit it.</div>`)[0];
+                popup_858df26a68213cb91344a09565cb427a.setContent(html_2de03948abb72e40d2c72758282602e3);
             
         
 
-        marker_ca12accf686b422fdf1200805d74418a.bindPopup(popup_11698de711e8c202e7faf3e4cfe356ae)
+        marker_21ddf12b15f8bb7a8714cf0e1d18a267.bindPopup(popup_858df26a68213cb91344a09565cb427a)
         ;
 
         
     
     
-            feature_group_2cecd27cecdec9c53d031f65fea0c5d7.addTo(map_b0bfc6b286748663d80e33f1db6ecd3a);
+            marker_21ddf12b15f8bb7a8714cf0e1d18a267.bindTooltip(
+                `<div>
+                     Location: Methodist hall. Click for more information
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
         
     
-            var feature_group_195c74983e124ae78bea1511ed16140c = L.featureGroup(
+            feature_group_0ffbca9c9208c8cf091eb9539c117312.addTo(map_8d1d6685de814d4d96def74b59e287cf);
+        
+    
+            var feature_group_dd4917e903f00a72a23eb4e0c5e587a7 = L.featureGroup(
                 {
 }
             );
         
     
 
-        function geo_json_4681f31e88c6864a5591dd8396e0af55_onEachFeature(feature, layer) {
+        function geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0_onEachFeature(feature, layer) {
             layer.on({
             });
         };
-        var geo_json_4681f31e88c6864a5591dd8396e0af55 = L.geoJson(null, {
-                onEachFeature: geo_json_4681f31e88c6864a5591dd8396e0af55_onEachFeature,
+        var geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0 = L.geoJson(null, {
+                onEachFeature: geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0_onEachFeature,
             
             ...{
 }
         });
 
-        function geo_json_4681f31e88c6864a5591dd8396e0af55_add (data) {
-            geo_json_4681f31e88c6864a5591dd8396e0af55
+        function geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0_add (data) {
+            geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0
                 .addData(data);
         }
-            geo_json_4681f31e88c6864a5591dd8396e0af55_add({&quot;bbox&quot;: [-10.0, 51.0, -5.0, 55.0], &quot;features&quot;: [{&quot;bbox&quot;: [-10.0, 51.0, -5.0, 55.0], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-10.0, 51.0], [-10.0, 55.0], [-5.0, 55.0], [-5.0, 51.0], [-10.0, 51.0]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;name&quot;: &quot;Region&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
-        geo_json_4681f31e88c6864a5591dd8396e0af55.setStyle(function(feature) {return feature.properties.style;});
+            geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0_add({&quot;bbox&quot;: [-8.913169563297714, 51.61283136590018, -8.877505720375659, 51.629940834011705], &quot;features&quot;: [{&quot;bbox&quot;: [-8.913169563297714, 51.61283136590018, -8.877505720375659, 51.629940834011705], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-8.880478935328853, 51.62060578154822], [-8.880668675111432, 51.62127315067259], [-8.882827954033061, 51.621973046255356], [-8.883528416324923, 51.62232300852135], [-8.881519322864907, 51.62320422039247], [-8.879040198255776, 51.623854085408894], [-8.877505720375659, 51.6239959392226], [-8.879266329227042, 51.62574079439028], [-8.882206600383132, 51.62685793528044], [-8.8882737374826, 51.62476657881866], [-8.888184925810634, 51.625451347264104], [-8.88712710581853, 51.625926886904736], [-8.887118005661346, 51.6263025684723], [-8.88431917277542, 51.62742010847718], [-8.885017196002241, 51.62832841562117], [-8.884029987366567, 51.62855673953722], [-8.88412570929345, 51.629940834011705], [-8.887002063793055, 51.62923272360204], [-8.887182047314477, 51.62967531722164], [-8.889327375778873, 51.62695367550896], [-8.890999607791382, 51.6260115530657], [-8.892072272023608, 51.62655824423537], [-8.893955289584003, 51.62658152356522], [-8.89448927963832, 51.62707005309396], [-8.897206071143174, 51.62748881992805], [-8.906124641877767, 51.623534134197826], [-8.906349479795125, 51.62320843501189], [-8.906124641877767, 51.62181255487815], [-8.906049695904983, 51.62055622604211], [-8.90919742675203, 51.620090910238986], [-8.908672804944501, 51.61878800060623], [-8.906649263685296, 51.618694934201045], [-8.906649263685296, 51.617857327965936], [-8.913169563297714, 51.61701970627098], [-8.91204537370885, 51.6145067484282], [-8.909347318697627, 51.615297879792564], [-8.906949047575438, 51.6149721214893], [-8.903126802975379, 51.61539095316414], [-8.902976911030777, 51.61590285329612], [-8.900803477825946, 51.616135533265776], [-8.900728531854213, 51.61729891522023], [-8.902452289222282, 51.61767119114725], [-8.902677127140663, 51.61822959931234], [-8.900503693935832, 51.61841573384041], [-8.899304558375263, 51.617857327965936], [-8.897805638924524, 51.61878800060623], [-8.897355963088785, 51.61808999791512], [-8.896531557391171, 51.61608899736714], [-8.897131125171484, 51.61501865853276], [-8.896156827528273, 51.614180984446705], [-8.89458296210475, 51.61283136590018], [-8.892484474872731, 51.61478597283758], [-8.893084042654039, 51.61580978097433], [-8.892334582928157, 51.616461283219195], [-8.891135447367617, 51.61701970627098], [-8.888887068191025, 51.61897413284399], [-8.886713634987188, 51.61892759985628], [-8.885664391371193, 51.62027703713281], [-8.881692254825538, 51.619392926394994], [-8.880478935328853, 51.62060578154822]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;name&quot;: &quot;Clonakilty town boundary&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+        geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0.setStyle(function(feature) {return feature.properties.style;});
 
         
     
-            geo_json_4681f31e88c6864a5591dd8396e0af55.addTo(feature_group_195c74983e124ae78bea1511ed16140c);
+            geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0.bindTooltip(
+                `<div>
+                     Clonakilty town centre. Layers like this could include heatmaps.
+                 </div>`,
+                {
+  &quot;sticky&quot;: true,
+}
+            );
         
     
-            feature_group_195c74983e124ae78bea1511ed16140c.addTo(map_b0bfc6b286748663d80e33f1db6ecd3a);
+            geo_json_b2c62cc8f6f2bfb507214aae4dab9ca0.addTo(feature_group_dd4917e903f00a72a23eb4e0c5e587a7);
         
     
-            var layer_control_81c7ea8e09108515b1629e88269ba3fd_layers = {
+            feature_group_dd4917e903f00a72a23eb4e0c5e587a7.addTo(map_8d1d6685de814d4d96def74b59e287cf);
+        
+    
+            var layer_control_3f88753bc1c0952b40dd08916895d327_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_b348bfc28115dde21a23db4ce5d22033,
+                    &quot;Traditional&quot; : tile_layer_3aa11db8ebed8ebd9aa735e80fcdf24e,
+                    &quot;Minimal&quot; : tile_layer_fe22170b1662acd6e2429a00179187ee,
+                    &quot;Esri Satellite&quot; : tile_layer_64ca0da134271a8d5b7225824cb6309b,
                 },
                 overlays :  {
-                    &quot;Cities&quot; : feature_group_2cecd27cecdec9c53d031f65fea0c5d7,
-                    &quot;Ireland Region&quot; : feature_group_195c74983e124ae78bea1511ed16140c,
+                    &quot;Community resources&quot; : feature_group_0ffbca9c9208c8cf091eb9539c117312,
+                    &quot;Clonakilty town boundary&quot; : feature_group_dd4917e903f00a72a23eb4e0c5e587a7,
                 },
             };
-            let layer_control_81c7ea8e09108515b1629e88269ba3fd = L.control.layers(
-                layer_control_81c7ea8e09108515b1629e88269ba3fd_layers.base_layers,
-                layer_control_81c7ea8e09108515b1629e88269ba3fd_layers.overlays,
+            let layer_control_3f88753bc1c0952b40dd08916895d327 = L.control.layers(
+                layer_control_3f88753bc1c0952b40dd08916895d327_layers.base_layers,
+                layer_control_3f88753bc1c0952b40dd08916895d327_layers.overlays,
                 {
   &quot;position&quot;: &quot;topright&quot;,
   &quot;collapsed&quot;: true,
   &quot;autoZIndex&quot;: true,
 }
-            ).addTo(map_b0bfc6b286748663d80e33f1db6ecd3a);
+            ).addTo(map_8d1d6685de814d4d96def74b59e287cf);
 
         
 </script>
 </html>" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe></div></div>
 </div>
 </div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<pre class="{html}"><code>&lt;!-- Utterances script to enable commenting and fetching data --&gt;
+&lt;script src="https://utteranc.es/client.js"
+  repo="your-github-username/your-repo" &lt;!-- Replace with your GitHub repo --&gt;
+  issue-term="pathname"
+  label="location"
+  theme="github-light"
+  crossorigin="anonymous"
+  async&gt;
+&lt;/script&gt;
+
+&lt;!-- Container for the map and user comments --&gt;
+&lt;div id="map" style="height: 500px;"&gt;&lt;/div&gt;
+
+&lt;script src="https://unpkg.com/leaflet/dist/leaflet.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  // Initialize the map
+  var map = L.map('map').setView([51.6223, -8.889], 16); // Center on Clonakilty
+
+  // Add OpenStreetMap tiles as the base map
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&amp;copy; &lt;a href="https://www.openstreetmap.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'
+  }).addTo(map);
+
+  // Function to fetch and display comments with coordinates
+  async function fetchComments() {
+    // Fetch issues from GitHub using the GitHub API
+    const response = await fetch('https://api.github.com/repos/your-github-username/your-repo/issues?labels=location');  // Replace with your repo
+    const issues = await response.json();
+
+    // Loop through the issues and add markers to the map based on the comment body
+    issues.forEach(function(issue) {
+      const comment = issue.body;  // The comment text, which should contain lat, lon
+      const regex = /(-?\d+\.\d+),\s*(-?\d+\.\d+)/;  // Regex to match lat, lon
+      const match = comment.match(regex);
+
+      if (match) {
+        const lat = parseFloat(match[1]);
+        const lon = parseFloat(match[2]);
+        L.marker([lat, lon]).addTo(map)
+          .bindPopup('&lt;b&gt;' + issue.title + '&lt;/b&gt;&lt;br&gt;' + comment);
+      }
+    });
+  }
+
+  // Fetch comments when the page loads
+  fetchComments();
+&lt;/script&gt;</code></pre>
 
 
+</div>
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

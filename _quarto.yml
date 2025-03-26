@@ -13,6 +13,7 @@ website:
       - about.qmd
       - test-js.qmd
       - test.html
+      - new_comments_example.qmd
 
 format:
   html:
